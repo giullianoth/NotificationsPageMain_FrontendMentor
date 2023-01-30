@@ -1,0 +1,98 @@
+@mixin setFonts($fontList: $fonts) {
+    @each $presets in $fontList {
+
+        $weight: ();
+        $family: ();
+        $files:  ();
+        $path:   ();
+        $format: ();
+    
+        @each $attr, $values in $presets {
+    
+            @if $attr =="weights" {
+                @for $w from 1 through length($list: $values) {
+                    $weight: append($list: $weight, $val: nth($list: $values, $n: $w), $separator: comma);
+                }
+            }
+    
+            @if $attr =="family" {
+                @for $f from 1 through length($list: $weight) {
+                    $family: append($list: $family, $val: $values, $separator: comma);
+                }
+            }
+    
+            @if $attr =="files" {
+                @for $fl from 1 through length($list: $weight) {
+                    $files: append($list: $files, $val: nth($list: $values, $n: $fl), $separator: comma);
+                }
+            }
+    
+            @if $attr =="path" {
+                @for $p from 1 through length($list: $weight) {
+                    $path: append($list: $path, $val: "#{$font-path}/#{$values}/#{nth($list: $files, $n: $p)}", $separator: comma);
+                }
+            }
+    
+            @if $attr =="format" {
+                @for $fm from 1 through length($list: $weight) {
+                    $format: append($list: $format, $val: $values, $separator: comma);
+                }
+            }
+        }
+    
+        @for $font from 1 through length($list: $weight) {
+            @font-face {
+                font-family: nth($list: $family, $n: $font);
+                src: url(nth($list: $path, $n: $font)) format(nth($list: $format, $n: $font));
+                font-weight: nth($list: $weight, $n: $font);
+            }
+        }
+    }
+}
+
+@mixin setBrowserCores($attr, $value, $cores: $browser-cores) {
+    #{$attr}: #{$value};
+
+    @each $core in $cores {
+        -#{$core}-#{$attr}: #{$value};
+    }
+}
+
+@mixin boxSizing($value: border-box) {
+    @include setBrowserCores(box-sizing, $value);
+}
+
+@mixin borderRadius($value: $radius-default) {
+    @include setBrowserCores(border-radius, $value);
+}
+
+@mixin rounded() {
+    @include borderRadius(50%);
+}
+
+@mixin flex($justifyContent: center, $alignItems: center, $flexWrap: wrap) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-wrap: $flexWrap;
+}
+
+@mixin flexBasis($basis, $gap: 0) {
+    @if $gap ==0 {
+        flex-basis: $basis;
+    }
+
+    @else {
+        flex-basis: calc($basis - $gap);
+    }
+}
+
+@mixin transition($property: all, $duration: $transition-time-default, $timing-function: ease-in-out, $delay: 0s) {
+    transition: $property $duration $timing-function $delay;
+}
+
+@mixin setResponsiveDesign($screenWidth) {
+    @media screen and (min-width: $screenWidth) {
+        @content;
+    }
+}

@@ -1,0 +1,61 @@
+// ***********************
+// *  RESPONSIVE LAYOUT  *
+// ***********************
+$layout-mobile:   375px;
+$layout-desktop: 1440px;
+
+// ******************
+// *  THEME COLORS  *
+// ******************
+// Primary
+$color-red:    hsl(1, 90%, 64%);
+$color-blue: hsl(219, 85%, 26%);
+
+//Neutral
+$color-white:                     hsl(0, 0%, 100%);
+$color-very-light-grayish-blue: hsl(210, 60%, 98%);
+$color-light-grayish-blue-1:    hsl(211, 68%, 94%);
+$color-light-grayish-blue-2:    hsl(205, 33%, 90%);
+$color-grayish-blue:            hsl(219, 14%, 63%);
+$color-dark-grayish-blue:       hsl(219, 12%, 42%);
+$color-very-dark-blue:          hsl(224, 21%, 14%);
+
+// ****************
+// *  TIPOGRAPHY  *
+// ****************
+$fonts:                          ();
+$font-path:           "../../fonts";
+$font-size-paragraph:          16px;
+
+// Plus Jakarta Sans Font Presets
+$font-plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+$font-plus-jakarta-sans-presets: (
+    weights: (500, 800),
+    family: $font-plus-jakarta-sans,
+    files: (
+        "PlusJakartaSans-Medium.ttf",
+        "PlusJakartaSans-ExtraBold.ttf"
+    ),
+    path: "static",
+    format: "truetype"
+);
+
+// Set Font List
+$fonts: append($list: $fonts, $val: $font-plus-jakarta-sans-presets, $separator: comma);
+
+// *******************
+// *  BROWSER CORES  *
+// *******************
+$browser-cores: ("moz", "webkit");
+
+// *******************
+// *  BORDER RADIUS  *
+// *******************
+$radius-default: 10px;
+$radius-big:     20px;
+$radius-small:    5px;
+
+// ****************************
+// *  TRANSITION / ANIMATION  *
+// ****************************
+$transition-time-default: 0.3s;

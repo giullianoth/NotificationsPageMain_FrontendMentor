@@ -1,0 +1,171 @@
+/* Theme Config */
+.main_notification {
+    background-color: $color-white;
+    max-width: 600px;
+    padding: 20px;
+
+    box-shadow: 0 0 10px $color-shadow;
+
+    @include setResponsiveDesign($layout-mobile) {
+        padding: 30px;
+    }
+
+    @include setResponsiveDesign(600px) {
+        @include borderRadius($radius-big);
+        margin-top: 10px;
+    };
+
+    @include setResponsiveDesign($layout-desktop) {
+        max-width: 740px;
+    };
+
+    &_title {
+        @include flex(space-between);
+        padding-bottom: 30px;
+
+        h1 {
+            font-size: 1.2em;            
+            color: $color-very-dark-blue;
+
+            @include setResponsiveDesign(480px) {
+                font-size: 1.6em;
+            };
+
+            .notification_count {
+                font-size: 0.7em;
+                color: $color-white;
+
+                background-color: $color-blue;
+                display: inline-block;
+
+                padding: 1px 8px;
+                margin-left: 10px;
+
+                @include borderRadius($radius-small);
+                @include transition;
+
+                @include setResponsiveDesign(480px) {
+                    padding: 1px 12px;
+                };
+            }
+        }
+
+        button {
+            background: none;
+            border: none;
+            color: $color-dark-grayish-blue;
+            cursor: pointer;
+
+            @include transition;
+
+            &:hover,
+            &:focus {
+                color: $color-blue;
+            }
+        }
+    }
+
+    &_content {
+        width: 100%;
+
+        &_item {
+            @include flex(flex-start, flex-start, nowrap);
+            gap: 20px;
+
+            padding: 10px;
+            margin-bottom: 10px;
+
+            cursor: pointer;
+
+            border: 1px solid transparent;
+
+            @include borderRadius;
+            @include transition;
+
+            @include setResponsiveDesign(600px) {
+                padding: 16px
+            };
+
+            &:hover,
+            &:focus {
+                border-color: $color-light-grayish-blue-2;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.unread {
+                background-color: $color-very-light-grayish-blue;
+            }
+
+            .avatar {
+                @include flexBasis(50px);
+            }
+
+            .picture_post {
+                @include flexBasis(50px);
+                border: 2px solid transparent;
+
+                @include borderRadius;
+
+                &:hover,
+                &:focus {
+                    border-color: $color-very-light-grayish-blue;
+                }
+            }
+
+            .info {
+                @include flexBasis(100%, 50px);
+
+                &.third_item {
+                    @include flexBasis(100%, calc(50px / 2));
+                }
+
+                h2 {
+                    font-weight: 500;
+
+                    a {
+                        font-weight: 800;
+                        color: $color-very-dark-blue;
+
+                        &:hover {
+                            color: $color-blue;
+                        }
+                    }
+
+                    span.unread_mark {
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        background-color: $color-red;
+
+                        margin-left: 4px;
+
+                        @include rounded;
+                        @include transition;
+                    }
+                }
+
+                .time_past {
+                    color: $color-grayish-blue;
+                    margin-top: 6px;
+                }
+
+                .message {
+                    padding: 16px;
+                    border: 1px solid $color-light-grayish-blue-2;
+                    margin-top: 16px;
+
+                    @include borderRadius($radius-small);
+                    @include transition;
+
+                    &:hover,
+                    &:focus {
+                        background-color: $color-light-grayish-blue-1;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -48,3 +48,175 @@ body img {
 .main_header {
   display: none;
 }
+
+/* Theme Config */
+.main_notification {
+  background-color: hsl(0deg, 0%, 100%);
+  max-width: 600px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+@media screen and (min-width: 375px) {
+  .main_notification {
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .main_notification {
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main_notification {
+    max-width: 740px;
+  }
+}
+.main_notification_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+.main_notification_title h1 {
+  font-size: 1.2em;
+  color: hsl(224deg, 21%, 14%);
+}
+@media screen and (min-width: 480px) {
+  .main_notification_title h1 {
+    font-size: 1.6em;
+  }
+}
+.main_notification_title h1 .notification_count {
+  font-size: 0.7em;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(219deg, 85%, 26%);
+  display: inline-block;
+  padding: 1px 8px;
+  margin-left: 10px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  transition: all 0.3s ease-in-out 0s;
+}
+@media screen and (min-width: 480px) {
+  .main_notification_title h1 .notification_count {
+    padding: 1px 12px;
+  }
+}
+.main_notification_title button {
+  background: none;
+  border: none;
+  color: hsl(219deg, 12%, 42%);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+.main_notification_title button:hover, .main_notification_title button:focus {
+  color: hsl(219deg, 85%, 26%);
+}
+.main_notification_content {
+  width: 100%;
+}
+.main_notification_content_item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  transition: all 0.3s ease-in-out 0s;
+}
+@media screen and (min-width: 600px) {
+  .main_notification_content_item {
+    padding: 16px;
+  }
+}
+.main_notification_content_item:hover, .main_notification_content_item:focus {
+  border-color: hsl(205deg, 33%, 90%);
+}
+.main_notification_content_item:last-child {
+  margin-bottom: 0;
+}
+.main_notification_content_item.unread {
+  background-color: hsl(210deg, 60%, 98%);
+}
+.main_notification_content_item .avatar {
+  flex-basis: 50px;
+}
+.main_notification_content_item .picture_post {
+  flex-basis: 50px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+.main_notification_content_item .picture_post:hover, .main_notification_content_item .picture_post:focus {
+  border-color: hsl(210deg, 60%, 98%);
+}
+.main_notification_content_item .info {
+  flex-basis: calc(100% - 50px);
+}
+.main_notification_content_item .info.third_item {
+  flex-basis: calc(100% - 25px);
+}
+.main_notification_content_item .info h2 {
+  font-weight: 500;
+}
+.main_notification_content_item .info h2 a {
+  font-weight: 800;
+  color: hsl(224deg, 21%, 14%);
+}
+.main_notification_content_item .info h2 a:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.main_notification_content_item .info h2 span.unread_mark {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: hsl(1deg, 90%, 64%);
+  margin-left: 4px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  transition: all 0.3s ease-in-out 0s;
+}
+.main_notification_content_item .info .time_past {
+  color: hsl(219deg, 14%, 63%);
+  margin-top: 6px;
+}
+.main_notification_content_item .info .message {
+  padding: 16px;
+  border: 1px solid hsl(205deg, 33%, 90%);
+  margin-top: 16px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.main_notification_content_item .info .message:hover, .main_notification_content_item .info .message:focus {
+  background-color: hsl(211deg, 68%, 94%);
+}
+
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.attribution a {
+  color: hsl(224deg, 21%, 14%);
+  font-size: inherit;
+}
+.attribution a:hover {
+  color: hsl(219deg, 85%, 26%);
+  text-decoration: underline;
+}

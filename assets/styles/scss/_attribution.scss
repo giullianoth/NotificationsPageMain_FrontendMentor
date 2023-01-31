@@ -1,0 +1,17 @@
+/* Attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    margin-bottom: 10px;
+
+    a {
+        color: $color-very-dark-blue;
+        font-size: inherit;
+
+        &:hover {
+            color: $color-blue;
+            text-decoration: underline;
+        }
+    }
+}

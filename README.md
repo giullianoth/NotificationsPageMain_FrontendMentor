@@ -33,6 +33,12 @@ Aqui os usuários são capazes de:
 
 ## Conteúdo | Content
 
+- [Status do projeto | Project status](#status-do-projeto--project-status)
+- [Layout](#layout)
+- [Tecnologias utilizadas | Technologies used](#tecnologias-utilizadas--technologies-used)
+- [Como instalar | How to install](#como-instalar--how-to-install)
+- [Autor | Author](#autor--author)
+
 ## Status do projeto | Project status
 
 Projeto finalizado, sendo aberto a propostas de melhorias ou correções.

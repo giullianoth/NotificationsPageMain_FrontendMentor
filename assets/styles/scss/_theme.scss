@@ -55,6 +55,7 @@
             border: none;
             color: $color-dark-grayish-blue;
             cursor: pointer;
+            font-family: inherit;
 
             @include transition;
 

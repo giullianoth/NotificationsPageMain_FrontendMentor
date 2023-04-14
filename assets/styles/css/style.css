@@ -26,9 +26,9 @@ body {
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  background-color: hsl(210deg, 60%, 98%);
+  background-color: hsl(210, 60%, 98%);
   font-family: "Plus Jakarta Sans", sans-serif;
-  color: hsl(219deg, 12%, 42%);
+  color: hsl(219, 12%, 42%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +51,7 @@ body img {
 
 /* Theme Config */
 .main_notification {
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   max-width: 600px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -83,7 +83,7 @@ body img {
 }
 .main_notification_title h1 {
   font-size: 1.2em;
-  color: hsl(224deg, 21%, 14%);
+  color: hsl(224, 21%, 14%);
 }
 @media screen and (min-width: 480px) {
   .main_notification_title h1 {
@@ -92,8 +92,8 @@ body img {
 }
 .main_notification_title h1 .notification_count {
   font-size: 0.7em;
-  color: hsl(0deg, 0%, 100%);
-  background-color: hsl(219deg, 85%, 26%);
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(219, 85%, 26%);
   display: inline-block;
   padding: 1px 8px;
   margin-left: 10px;
@@ -110,12 +110,13 @@ body img {
 .main_notification_title button {
   background: none;
   border: none;
-  color: hsl(219deg, 12%, 42%);
+  color: hsl(219, 12%, 42%);
   cursor: pointer;
+  font-family: inherit;
   transition: all 0.3s ease-in-out 0s;
 }
 .main_notification_title button:hover, .main_notification_title button:focus {
-  color: hsl(219deg, 85%, 26%);
+  color: hsl(219, 85%, 26%);
 }
 .main_notification_content {
   width: 100%;
@@ -141,13 +142,13 @@ body img {
   }
 }
 .main_notification_content_item:hover, .main_notification_content_item:focus {
-  border-color: hsl(205deg, 33%, 90%);
+  border-color: hsl(205, 33%, 90%);
 }
 .main_notification_content_item:last-child {
   margin-bottom: 0;
 }
 .main_notification_content_item.unread {
-  background-color: hsl(210deg, 60%, 98%);
+  background-color: hsl(210, 60%, 98%);
 }
 .main_notification_content_item .avatar {
   flex-basis: 50px;
@@ -160,7 +161,7 @@ body img {
   -webkit-border-radius: 10px;
 }
 .main_notification_content_item .picture_post:hover, .main_notification_content_item .picture_post:focus {
-  border-color: hsl(210deg, 60%, 98%);
+  border-color: hsl(210, 60%, 98%);
 }
 .main_notification_content_item .info {
   flex-basis: calc(100% - 50px);
@@ -173,16 +174,16 @@ body img {
 }
 .main_notification_content_item .info h2 a {
   font-weight: 800;
-  color: hsl(224deg, 21%, 14%);
+  color: hsl(224, 21%, 14%);
 }
 .main_notification_content_item .info h2 a:hover {
-  color: hsl(219deg, 85%, 26%);
+  color: hsl(219, 85%, 26%);
 }
 .main_notification_content_item .info h2 span.unread_mark {
   display: inline-block;
   width: 10px;
   height: 10px;
-  background-color: hsl(1deg, 90%, 64%);
+  background-color: hsl(1, 90%, 64%);
   margin-left: 4px;
   border-radius: 50%;
   -moz-border-radius: 50%;
@@ -190,12 +191,12 @@ body img {
   transition: all 0.3s ease-in-out 0s;
 }
 .main_notification_content_item .info .time_past {
-  color: hsl(219deg, 14%, 63%);
+  color: hsl(219, 14%, 63%);
   margin-top: 6px;
 }
 .main_notification_content_item .info .message {
   padding: 16px;
-  border: 1px solid hsl(205deg, 33%, 90%);
+  border: 1px solid hsl(205, 33%, 90%);
   margin-top: 16px;
   border-radius: 5px;
   -moz-border-radius: 5px;
@@ -203,7 +204,7 @@ body img {
   transition: all 0.3s ease-in-out 0s;
 }
 .main_notification_content_item .info .message:hover, .main_notification_content_item .info .message:focus {
-  background-color: hsl(211deg, 68%, 94%);
+  background-color: hsl(211, 68%, 94%);
 }
 
 /* Attribution */
@@ -213,10 +214,10 @@ body img {
   margin-bottom: 10px;
 }
 .attribution a {
-  color: hsl(224deg, 21%, 14%);
+  color: hsl(219, 85%, 26%);
   font-size: inherit;
 }
 .attribution a:hover {
-  color: hsl(219deg, 85%, 26%);
+  color: hsl(219, 85%, 26%);
   text-decoration: underline;
 }

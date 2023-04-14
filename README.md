@@ -51,19 +51,19 @@ Construído a partir do método *mobile-first*, o projeto é responsivo, ou seja
 
 *Built from the mobile-first method, the project is responsive, that is, it is adaptable to the most varied sizes and screen resolutions, as shown below.*
 
-![Captura de tela em 375px | Screenshot in 375px](assets/images/screenshots/screenshot_375px.png)
+![Captura de tela em 375px | Screenshot in 375px](assets/images/screenshots/Screenshot_375px.png)
 
 Captura de tela em 375px | Screenshot in 375px
 
 ---
 
-![Captura de tela em 768px | Screenshot in 768px](assets/images/screenshots/screenshot_768px.png)
+![Captura de tela em 768px | Screenshot in 768px](assets/images/screenshots/Screenshot_768px.png)
 
 Captura de tela em 768px | Screenshot in 768px
 
 ---
 
-![Captura de tela em 1440px | Screenshot in 1440px](assets/images/screenshots/screenshot_1440px.png)
+![Captura de tela em 1440px | Screenshot in 1440px](assets/images/screenshots/Screenshot_1440px.png)
 
 Captura de tela em 1440px | Screenshot in 1440px
 
